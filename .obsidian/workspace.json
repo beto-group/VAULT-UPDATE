@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "GithubReleaseUpdate.viewer.v1"
             }
+          },
+          {
+            "id": "36e68549c8ec8ccf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "GithubReleaseUpdate.component.v1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "GithubReleaseUpdate.component.v1"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -287,10 +302,11 @@
       "random-note:Open random note": false
     }
   },
-  "active": "4b85274b0325e48c",
+  "active": "36e68549c8ec8ccf",
   "lastOpenFiles": [
-    "GithubReleaseUpdate.component.v1.md",
+    "README.md",
     "GithubReleaseUpdate.viewer.v1.md",
+    "GithubReleaseUpdate.component.v1.md",
     "SVGAnimations.component.v3.md",
     "ExcalidrawLoading.viewer.v1.md",
     "BASIC.fulltab.viewer.v1.md",
@@ -324,7 +340,6 @@
     "_RESOURCES/ASSETS/888/ASSETS_nosvg_.A/ASSOCIATION.md",
     "_RESOURCES/ASSETS/888/ASSETS_.A/HARAMBE_v01_.A 1.md",
     "_RESOURCES/ASSETS/888/ASSETS_.A/PERSON_v08_.A.md",
-    "_RESOURCES/ASSETS/888/ASSETS_.A/DOC_v01_.A.md",
     "_RESOURCES/DATACORE/_compiled",
     "_compiled",
     "_RESOURCES/DATACORE/12 LottieExperiment/_compiled",
