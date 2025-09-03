@@ -1,0 +1,5236 @@
+{
+  "workspaces": {
+    "CODING WORKFLOW [KANBAN - 2025.03.28]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "4e8787e07c7cf3c3",
+            "type": "tabs",
+            "dimension": 49.68944099378882,
+            "children": [
+              {
+                "id": "946a02af2514a850",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v002.1.4.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v002.1.4"
+                }
+              },
+              {
+                "id": "a8583381b809a07c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.view.v002.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.view.v002"
+                }
+              },
+              {
+                "id": "d4f0dfe0d7b72d07",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.view.v008.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.view.v008"
+                }
+              },
+              {
+                "id": "f4b8655351d2e503",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.view.v009.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.view.v009"
+                }
+              },
+              {
+                "id": "1c4f0b2df00e4bf4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/GUM.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GUM.enigmas."
+                }
+              },
+              {
+                "id": "702ec69c76b3fdb4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/SUPERFOOD.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "SUPERFOOD.enigmas."
+                }
+              },
+              {
+                "id": "fd6809cb89188f3b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/GIFT.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GIFT.enigmas."
+                }
+              },
+              {
+                "id": "c2df118a24dd0f12",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/LEADERS.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "LEADERS.enigmas."
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "2d42c755a73800fe",
+            "type": "tabs",
+            "dimension": 50.31055900621118,
+            "children": [
+              {
+                "id": "324a8e488843c687",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v001"
+                }
+              },
+              {
+                "id": "7abb86c79b2efd4c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v002.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v002"
+                }
+              },
+              {
+                "id": "92eb850ab91cd3e4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v003.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v003"
+                }
+              },
+              {
+                "id": "46e4bd02a9f8d860",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v004.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v004"
+                }
+              },
+              {
+                "id": "4e80cab387acade9",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v005.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v005"
+                }
+              },
+              {
+                "id": "4fc1a2360e365858",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v006.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v006"
+                }
+              },
+              {
+                "id": "33e0c42de2f29c44",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v007.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v007"
+                }
+              },
+              {
+                "id": "70b5403e424c7584",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v008.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v008"
+                }
+              },
+              {
+                "id": "1aaf038a2bf90ea6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v009.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v009"
+                }
+              },
+              {
+                "id": "025b5d337921ed41",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KANBAN.component.v009.b.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "KANBAN.component.v009.b"
+                }
+              }
+            ],
+            "currentTab": 8
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 217.5
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 53.084112149532714,
+            "children": [
+              {
+                "id": "20c36e866173db37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/CALENDAR/CALENDAR.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CALENDAR"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "FitnessExplorer.v001.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for ContentExplorer.viewer.v001"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md"
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of Viewer7 1"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 46.915887850467286,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "mesh-ai:Mesh AI Integration": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "1aaf038a2bf90ea6",
+      "mtime": "2025-03-28T20:20:21+09:00"
+    },
+    "CODING WORKFLOW [FITNESS TRAINER - 2025.03.30]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "4e8787e07c7cf3c3",
+            "type": "tabs",
+            "dimension": 76.8250289687138,
+            "children": [
+              {
+                "id": "b13d4ab49ef79816",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Ham Code.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Ham Code"
+                }
+              },
+              {
+                "id": "5f80397b42323000",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.viewer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.viewer.v001"
+                }
+              },
+              {
+                "id": "50abe9d2349f6749",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.viewer.v002.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.viewer.v002"
+                }
+              },
+              {
+                "id": "6e70d854dfe0f64c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.viewer.v003.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.viewer.v003"
+                }
+              },
+              {
+                "id": "c7c548e5e6126814",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FitnessExplorer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FitnessExplorer.v001"
+                }
+              },
+              {
+                "id": "46b86267cfed64ed",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BOUNTY.viewer.v007.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BOUNTY.viewer.v007"
+                }
+              },
+              {
+                "id": "a4b50a4707eb5c74",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BOUNTY.component.v013.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BOUNTY.component.v013"
+                }
+              },
+              {
+                "id": "8cb9218ee61c709b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.component.v021.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.component.v021"
+                }
+              },
+              {
+                "id": "1ca97aa4844b17d8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v020.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v020"
+                }
+              }
+            ],
+            "currentTab": 4
+          },
+          {
+            "id": "7702885cb33d3144",
+            "type": "tabs",
+            "dimension": 23.174971031286212,
+            "children": [
+              {
+                "id": "b24d26e8f7dd273e",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.component.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.component.v001"
+                }
+              },
+              {
+                "id": "5898a73c8befa123",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.component.v002.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.component.v002"
+                }
+              },
+              {
+                "id": "4844117a55f780f1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FITNESS.component.v003.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FITNESS.component.v003"
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 217.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 53.084112149532714,
+            "children": [
+              {
+                "id": "20c36e866173db37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/CALENDAR/CALENDAR.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CALENDAR"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "FitnessExplorer.v001.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for FitnessExplorer.v001"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md"
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of Viewer7 1"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 46.915887850467286,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "mesh-ai:Mesh AI Integration": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "c7c548e5e6126814",
+      "mtime": "2025-03-30T19:41:02+09:00"
+    },
+    "CODING WORKFLOW [TIKTOK FEED - 2025.04.01]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "4e8787e07c7cf3c3",
+            "type": "tabs",
+            "dimension": 64.19860627177701,
+            "children": [
+              {
+                "id": "e559b96a30474e60",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v009.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v009"
+                }
+              },
+              {
+                "id": "4caf5cd2e78dd330",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v021.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v021"
+                }
+              },
+              {
+                "id": "d520a0e26360fc70",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v022.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v022"
+                }
+              },
+              {
+                "id": "37f62835729a75f1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v023.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v023"
+                }
+              },
+              {
+                "id": "c38df2fe8d115cfc",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.viewer.v024.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.viewer.v024"
+                }
+              }
+            ],
+            "currentTab": 4
+          },
+          {
+            "id": "206109f5262f001a",
+            "type": "tabs",
+            "dimension": 35.801393728223,
+            "children": [
+              {
+                "id": "97352813a25d29e8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.component.v021.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.component.v021"
+                }
+              },
+              {
+                "id": "7a8161474a36dd9f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.component.v022.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.component.v022"
+                }
+              },
+              {
+                "id": "611f9d4ce9b5da2c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.component.v023.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.component.v023"
+                }
+              },
+              {
+                "id": "ccf06cba08c383d5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CustomFeed.component.v024.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CustomFeed.component.v024"
+                }
+              },
+              {
+                "id": "3bcd878519e635a8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/PHYSICAL.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "PHYSICAL.enigmas."
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 293.5
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 53.084112149532714,
+            "children": [
+              {
+                "id": "20c36e866173db37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/CALENDAR/CALENDAR.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CALENDAR"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "ContentExplorer.viewer.v001.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for ContentExplorer.viewer.v001"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md"
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of Viewer7 1"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 46.915887850467286,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "mesh-ai:Mesh AI Integration": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kanban:Create new board": false,
+          "obsidian-kit:PublishKit": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "c38df2fe8d115cfc",
+      "mtime": "2025-04-01T11:34:00+09:00"
+    },
+    "CW [FISHY!!! - 2025.04.07]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "4e8787e07c7cf3c3",
+            "type": "tabs",
+            "dimension": 52.27091633466136,
+            "children": [
+              {
+                "id": "74ada6c3c9fdf300",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium"
+                }
+              },
+              {
+                "id": "fa0b9a415113adb6",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium"
+                }
+              },
+              {
+                "id": "530f6f4ed5a2ac65",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.view.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.view.v1"
+                }
+              },
+              {
+                "id": "608f572aefeb0310",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.view.v2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.view.v2"
+                }
+              },
+              {
+                "id": "a5368dcdf2241780",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.view.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.view.v3"
+                }
+              },
+              {
+                "id": "d4e74c9fb532696f",
+                "type": "leaf",
+                "state": {
+                  "type": "code-editor",
+                  "state": {
+                    "file": "scripts/aquarium/animation.js"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              },
+              {
+                "id": "2f0f40196e4eea58",
+                "type": "leaf",
+                "state": {
+                  "type": "code-editor",
+                  "state": {
+                    "file": "scripts/aquarium/aquarium.js"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              },
+              {
+                "id": "127d5595e647ce7c",
+                "type": "leaf",
+                "state": {
+                  "type": "code-editor",
+                  "state": {
+                    "file": "scripts/aquarium/animation.js"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              },
+              {
+                "id": "1d8cf3546fa31467",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DatacoreFlexilis.33.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DatacoreFlexilis.33"
+                }
+              }
+            ],
+            "currentTab": 4
+          },
+          {
+            "id": "2d42c755a73800fe",
+            "type": "tabs",
+            "dimension": 47.72908366533864,
+            "children": [
+              {
+                "id": "647c78efdc766413",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "KNOWLEDGE/HEALTH/HEALTH.enigmas..md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "HEALTH.enigmas."
+                }
+              },
+              {
+                "id": "496194dfe79ad4b5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "LOTTIE!!v.2.1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "LOTTIE!!v.2.1"
+                }
+              },
+              {
+                "id": "fa93d998e35c7336",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "LOTTIE!!v.5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "LOTTIE!!v.5"
+                }
+              },
+              {
+                "id": "d1d3fea60afd7fb2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.component.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.component.v1"
+                }
+              },
+              {
+                "id": "7e7621068e6fea34",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.component.v2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.component.v2"
+                }
+              },
+              {
+                "id": "af1fca275d1dea9f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.component.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.component.v3"
+                }
+              }
+            ],
+            "currentTab": 5
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 312.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 53.084112149532714,
+            "children": [
+              {
+                "id": "20c36e866173db37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/CALENDAR/CALENDAR.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CALENDAR"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "3DWorld.view.v23.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for ContentExplorer.viewer.v001"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md"
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of Viewer7 1"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 46.915887850467286,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "mesh-ai:Mesh AI Integration": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "templater-obsidian:Templater": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "a5368dcdf2241780",
+      "mtime": "2025-04-07T20:16:03+09:00"
+    },
+    "CW [WorldView - 2025.04.16]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "2d42c755a73800fe",
+            "type": "tabs",
+            "dimension": 57.66738660907127,
+            "children": [
+              {
+                "id": "14a6fc7fa978a4ba",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "D3JS.experiment.view.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "D3JS.experiment.view.v1"
+                }
+              },
+              {
+                "id": "3c7aeaf884bfdce2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.view.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.view.v3"
+                }
+              },
+              {
+                "id": "865f0c029da365b8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ScreenResizing.view.v7.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ScreenResizing.view.v7"
+                }
+              },
+              {
+                "id": "0b848cf7796a9bf4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ViewPIP.view.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ViewPIP.view.v3"
+                }
+              },
+              {
+                "id": "764d6aac1abf565b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DatacoreFlexilis.37.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DatacoreFlexilis.37"
+                }
+              },
+              {
+                "id": "0be44971239b8645",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v6.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v6"
+                }
+              },
+              {
+                "id": "5912dac424c82b70",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v7.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v7"
+                }
+              },
+              {
+                "id": "2c6cdb09ae0e55b3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v8.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v8"
+                }
+              },
+              {
+                "id": "8af7a537f5d70266",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v9"
+                }
+              },
+              {
+                "id": "7a614fb6dddf3813",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v10"
+                }
+              }
+            ],
+            "currentTab": 9
+          },
+          {
+            "id": "552497af68b1d811",
+            "type": "tabs",
+            "dimension": 42.33261339092873,
+            "children": [
+              {
+                "id": "f130d1ab93847a02",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ScreenResizing.component.v7.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ScreenResizing.component.v7"
+                }
+              },
+              {
+                "id": "6b0aa9bc939a1787",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ViewPIP.component.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ViewPIP.component.v1"
+                }
+              },
+              {
+                "id": "c1ad623fbeab80db",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ViewPIP.component.v2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ViewPIP.component.v2"
+                }
+              },
+              {
+                "id": "3b1fc4478ec7027a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ViewPIP.component.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ViewPIP.component.v3"
+                }
+              },
+              {
+                "id": "e851313a1189b01d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v5"
+                }
+              },
+              {
+                "id": "6ba1e8c8aa93ec34",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v6.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v6"
+                }
+              },
+              {
+                "id": "bf674cf3e4af0687",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v7.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v7"
+                }
+              },
+              {
+                "id": "e706c7279125dcc1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v8.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v8"
+                }
+              },
+              {
+                "id": "841acdc6226a93bd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v9"
+                }
+              },
+              {
+                "id": "03fcb453d7bfd0d8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v10"
+                }
+              }
+            ],
+            "currentTab": 9
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 296.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 53.084112149532714,
+            "children": [
+              {
+                "id": "47242b2ec8e60360",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "VR.bootcamp.notes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "VR.bootcamp.notes"
+                }
+              },
+              {
+                "id": "20c36e866173db37",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/CALENDAR/CALENDAR.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CALENDAR"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 4
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 46.915887850467286,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 276.5,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kanban:Create new board": false,
+          "obsidian-kit:PublishKit": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "7a614fb6dddf3813",
+      "mtime": "2025-04-16T20:45:27+09:00"
+    },
+    "CW - [MarkdownEditor - 2025.04.17]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "4add62b8b6a3b021",
+            "type": "tabs",
+            "dimension": 52.92134831460674,
+            "children": [
+              {
+                "id": "2b44ba41172135a8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BASIC.viewer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BASIC.viewer.v001"
+                }
+              },
+              {
+                "id": "4d1264e8e11dadb7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MarkdownEditor.view.v8.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MarkdownEditor.view.v8"
+                }
+              },
+              {
+                "id": "0516ef2827d8ee55",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MarkdownEditor.view.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MarkdownEditor.view.v9"
+                }
+              },
+              {
+                "id": "338b5a98cdd260dd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MarkdownEditor.view.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MarkdownEditor.view.v10"
+                }
+              }
+            ]
+          },
+          {
+            "id": "9607547da33240fe",
+            "type": "tabs",
+            "dimension": 47.07865168539326,
+            "children": [
+              {
+                "id": "3dbf4ae7166c6086",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MarkdownEditor.component.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MarkdownEditor.component.v9"
+                }
+              },
+              {
+                "id": "81e6e38eef1e1105",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MarkdownEditor.component.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MarkdownEditor.component.v10"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 238.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "dimension": 47.3,
+            "children": [
+              {
+                "id": "796c6545a3d13212",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "MarkdownEditor.view.v2.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for MarkdownEditor.view.v2"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "8af485441e17aaff",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_meshai/CUSTOM_PATTERNS/custom.recipeFormatter.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "custom.recipeFormatter.v01"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ]
+          },
+          {
+            "id": "73aae48f2b9e8852",
+            "type": "tabs",
+            "dimension": 52.7,
+            "children": [
+              {
+                "id": "eede42838450d9ad",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/Authentic Pico de Gallo.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "Authentic Pico de Gallo"
+                }
+              },
+              {
+                "id": "660940a770a46f0f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/ALL/\"Perfectly Chocolate\" Chocolate Frosting.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "\"Perfectly Chocolate\" Chocolate Frosting"
+                }
+              },
+              {
+                "id": "0be38ce55ed2cadd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile"
+                }
+              },
+              {
+                "id": "5a77c7a23f57e354",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 1"
+                }
+              },
+              {
+                "id": "032085b483fb3b5c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 2"
+                }
+              },
+              {
+                "id": "1110e1fa45a265e1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 3"
+                }
+              },
+              {
+                "id": "baf08ce1da62652c",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/_HELP/_help.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_help"
+                }
+              },
+              {
+                "id": "7f2d422790021e82",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "_setup/_views/WEEKLY MEALS.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WEEKLY MEALS"
+                }
+              },
+              {
+                "id": "1e89775c16a88437",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "COOKBOOK/RECIPES/_setup/_all_recipes.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "_all_recipes"
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 415.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kanban:Create new board": false,
+          "obsidian-kit:PublishKit": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "2b44ba41172135a8",
+      "mtime": "2025-04-17T20:44:05+09:00"
+    },
+    "CW - [BABYLON WORLD - 2025.04.20]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "be18ac2780fd6519",
+            "type": "tabs",
+            "dimension": 44.576877234803334,
+            "children": [
+              {
+                "id": "b894b2d2c88bd956",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "c3d0c0b58745110f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v11.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v11"
+                }
+              },
+              {
+                "id": "43532e13f2f9e939",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v11.1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v11.1"
+                }
+              },
+              {
+                "id": "5ad23e1af54b926b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v12.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v12"
+                }
+              },
+              {
+                "id": "c0ae9a655796dac0",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v13.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v13"
+                }
+              },
+              {
+                "id": "8df17782f3735e21",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v14.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v14"
+                }
+              },
+              {
+                "id": "42677de99f414be3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.view.v15.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.view.v15"
+                }
+              },
+              {
+                "id": "2d16312cf59c86cf",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              }
+            ]
+          },
+          {
+            "id": "fd5c1cc9148fcb8e",
+            "type": "tabs",
+            "dimension": 55.423122765196666,
+            "children": [
+              {
+                "id": "13b09e671962e783",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v10"
+                }
+              },
+              {
+                "id": "dbaa38bf7dc21640",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v11.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v11"
+                }
+              },
+              {
+                "id": "19d96a8b89be6a40",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v11.1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v11.1"
+                }
+              },
+              {
+                "id": "3a4edfe9cdbcc440",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v12.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v12"
+                }
+              },
+              {
+                "id": "0d4ce9c3f8c47afd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v13.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v13"
+                }
+              },
+              {
+                "id": "a5e37b104d15704b",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CharacterLogic.component.v14.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CharacterLogic.component.v14"
+                }
+              }
+            ],
+            "currentTab": 5
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "tag:#low-carbs",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "973120be0c764dc1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Viewer2.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of Viewer2"
+                }
+              },
+              {
+                "id": "bc32049f06f152fb",
+                "type": "leaf",
+                "state": {
+                  "type": "empty",
+                  "state": {},
+                  "icon": "lucide-file",
+                  "title": "New tab"
+                }
+              },
+              {
+                "id": "72699ec0fe836d14",
+                "type": "leaf",
+                "state": {
+                  "type": "iframe-view",
+                  "state": {
+                    "src": "https://www.instagram.com/reel/DGom-9ju790/embed"
+                  },
+                  "icon": "lucide-file",
+                  "title": "Plugin no longer active"
+                }
+              }
+            ],
+            "currentTab": 3
+          },
+          {
+            "id": "df7a42d2c5474e98",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "5083661623b1ec06",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile"
+                }
+              },
+              {
+                "id": "c0df61fdd2bef9c7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 6.md",
+                    "mode": "preview",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 6"
+                }
+              },
+              {
+                "id": "850d1ee8922d6d7a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 5.md",
+                    "mode": "source",
+                    "source": true
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 5"
+                }
+              },
+              {
+                "id": "f915201cb4f9cc87",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 4.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 4"
+                }
+              },
+              {
+                "id": "5ebb839d8c29d4ae",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 3"
+                }
+              },
+              {
+                "id": "e57b35472710ceb2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 2"
+                }
+              },
+              {
+                "id": "955ae494bca832b3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Untitled/TestFile 1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "TestFile 1"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 472.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "b894b2d2c88bd956",
+      "mtime": "2025-04-20T15:53:24+09:00"
+    },
+    "CW - {WorldBuilder - 2025.05.06}": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "22087e3a8cd6f79e",
+            "type": "tabs",
+            "dimension": 38.81373569198751,
+            "children": [
+              {
+                "id": "760f8ca1b1f734e3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "WorldBuilder.view.v16.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WorldBuilder.view.v16"
+                }
+              },
+              {
+                "id": "aff6a4552bc036e3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "WorldBuilder.view.v17.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WorldBuilder.view.v17"
+                }
+              }
+            ],
+            "currentTab": 1
+          },
+          {
+            "id": "716de77d98fbe2e1",
+            "type": "tabs",
+            "dimension": 61.18626430801248,
+            "children": [
+              {
+                "id": "c242ea95a46b7d2d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "WorldBuilder.component.v16.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WorldBuilder.component.v16"
+                }
+              },
+              {
+                "id": "0de110eb64c72097",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "WorldBuilder.component.v17.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "WorldBuilder.component.v17"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "async",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 452.5
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "4c0aae681b24d604",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "CharacterLogic.view.v14.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for CharacterLogic.view.v14"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "KNOWLEDGE/EXPERIENCES/_clean/CONSPIRACIES.enigmas..md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of CONSPIRACIES.enigmas."
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "obsidian888-nns:Open AI Console": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "c242ea95a46b7d2d",
+      "mtime": "2025-05-06T16:38:56+08:00"
+    },
+    "CW - [Canvas - 2025.05.21]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "22087e3a8cd6f79e",
+            "type": "tabs",
+            "dimension": 66.25454545454545,
+            "children": [
+              {
+                "id": "9eb8f0399aaeb1bd",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.view.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.view.v9"
+                }
+              },
+              {
+                "id": "d99b6d3530c58ddf",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.view.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.view.v10"
+                }
+              },
+              {
+                "id": "16ff9a384bd178be",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.view.v11.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.view.v11"
+                }
+              },
+              {
+                "id": "5a5523c3892f5a08",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.view.v12.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.view.v12"
+                }
+              },
+              {
+                "id": "8d9d81691ddba80a",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BASIC.viewer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BASIC.viewer.v001"
+                }
+              },
+              {
+                "id": "e4f0f57554e08df3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "SaveFile.viewer.v01.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "SaveFile.viewer.v01"
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "6cfc28e356fd1c6b",
+            "type": "tabs",
+            "dimension": 33.74545454545454,
+            "children": [
+              {
+                "id": "8ce1adfa96d9fce5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "3763a524fbf71ac4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "LOTTIE.view.v.2.5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "LOTTIE.view.v.2.5"
+                }
+              },
+              {
+                "id": "394652029640573f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ContentExplorer.viewer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ContentExplorer.viewer.v001"
+                }
+              },
+              {
+                "id": "320a8a2227b438b4",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "ContentExplorer.viewer.v002.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "ContentExplorer.viewer.v002"
+                }
+              },
+              {
+                "id": "e88b1d2d33c02cb5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FitnessExplorer.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FitnessExplorer.v001"
+                }
+              },
+              {
+                "id": "38e7b16dbe163b16",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "FirestormFrontier.Aquarium.REWORK.view.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "FirestormFrontier.Aquarium.REWORK.view.v3"
+                }
+              },
+              {
+                "id": "f6fde7e4882b3c23",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.component.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.component.v9"
+                }
+              },
+              {
+                "id": "029c97b54952ede3",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.component.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.component.v10"
+                }
+              },
+              {
+                "id": "3f2db736441c6328",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.component.v11.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.component.v11"
+                }
+              },
+              {
+                "id": "7ce0ffba37db4f2f",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "CanvasView.component.v12.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "CanvasView.component.v12"
+                }
+              },
+              {
+                "id": "0f8ae50d06ade882",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BASIC.component.v001.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BASIC.component.v001"
+                }
+              },
+              {
+                "id": "e7725be5c9c24bdb",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "SaveFile.component.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "SaveFile.component.v1"
+                }
+              },
+              {
+                "id": "22377e788a0297b7",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "LOTTIE!!v.5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "LOTTIE!!v.5"
+                }
+              }
+            ],
+            "currentTab": 9
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "async",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 287.5,
+        "collapsed": true
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "4c0aae681b24d604",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "CanvasView.view.v7.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for CanvasView.view.v7"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "KNOWLEDGE/EXPERIENCES/_clean/CONSPIRACIES.enigmas..md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 1.142488779533377,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of CONSPIRACIES.enigmas."
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 200,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "obsidian888-nns:Open AI Console": false,
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian-excalidraw-plugin:New drawing": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "7ce0ffba37db4f2f",
+      "mtime": "2025-05-21T21:59:12+08:00"
+    },
+    "cw_ [ working on minigame]": {
+      "main": {
+        "id": "94967ab9aa1286cf",
+        "type": "split",
+        "children": [
+          {
+            "id": "ca77db3a10a89ee8",
+            "type": "tabs",
+            "dimension": 54.88986784140969,
+            "children": [
+              {
+                "id": "2a93c232d2778028",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MiniGame888.view.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MiniGame888.view.v9"
+                }
+              },
+              {
+                "id": "974d013dc27225e2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BabylonLocal.view.v5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BabylonLocal.view.v5"
+                }
+              },
+              {
+                "id": "2927b6cf2eccb8c2",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "GLContextHandler.view.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GLContextHandler.view.v3"
+                }
+              }
+            ],
+            "currentTab": 2
+          },
+          {
+            "id": "734f1cccc5140dc7",
+            "type": "tabs",
+            "dimension": 45.11013215859031,
+            "children": [
+              {
+                "id": "13be32b80fcf5173",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "EnigmaViewer.component.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "EnigmaViewer.component.v3"
+                }
+              },
+              {
+                "id": "6894dcf915c40b97",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MiniGame888.component.v9.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MiniGame888.component.v9"
+                }
+              },
+              {
+                "id": "2a26ed5458f4f0d9",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "MiniGame888.component.v10.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "MiniGame888.component.v10"
+                }
+              },
+              {
+                "id": "0edff5a38820e92d",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "BabylonLocal.component.v5.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "BabylonLocal.component.v5"
+                }
+              },
+              {
+                "id": "399f20b6a5a14336",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "GLContextHandler.component.v1.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GLContextHandler.component.v1"
+                }
+              },
+              {
+                "id": "346ba819f8fd27f1",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "GLContextHandler.component.v2.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GLContextHandler.component.v2"
+                }
+              },
+              {
+                "id": "f353fd1e27178a28",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "GLContextHandler.component.v3.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "GLContextHandler.component.v3"
+                }
+              }
+            ],
+            "currentTab": 6
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "02b070122af57a8b",
+        "type": "split",
+        "children": [
+          {
+            "id": "e6feb1a0ac6742d7",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "0b07f6e2a2f8fdff",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "byCreatedTime",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "Files"
+                }
+              },
+              {
+                "id": "3b8aba5ccbc48ec1",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": false,
+                    "explainSearch": true,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "Search"
+                }
+              },
+              {
+                "id": "f3aab9fb6fd0851c",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "Bookmarks"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 287.5
+      },
+      "right": {
+        "id": "72336c485a695f58",
+        "type": "split",
+        "children": [
+          {
+            "id": "e997972c67ab0797",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "b5f56a711e9d7dda",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "Tags"
+                }
+              },
+              {
+                "id": "3a099495ca917f33",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "All properties"
+                }
+              },
+              {
+                "id": "4c0aae681b24d604",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "DATACORE.showcase.md",
+                    "mode": "source",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "DATACORE.showcase"
+                }
+              },
+              {
+                "id": "7fc17408951c21f2",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "EnigmaViewer.component.v1.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "File properties for EnigmaViewer.component.v1"
+                }
+              },
+              {
+                "id": "1c17d77f0968a5c9",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "RECIPES/ALL/Viewer7 1.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Viewer7 1"
+                }
+              },
+              {
+                "id": "da963e347582e762",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "COOKBOOK/CURRENT WEEK.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from CURRENT WEEK"
+                }
+              },
+              {
+                "id": "ac6823cdf77ad8f3",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "CharacterLogic.view.v10.md",
+                    "followCursor": false,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-list",
+                  "title": "Outline of CharacterLogic.view.v10"
+                }
+              },
+              {
+                "id": "181ac6ec4ba6bd94",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "KNOWLEDGE/EXPERIENCES/IDEES/LEARN.idees.enigmas..md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.9595815226989737,
+                      "close": true
+                    }
+                  },
+                  "icon": "lucide-git-fork",
+                  "title": "Graph of LEARN.idees.enigmas."
+                }
+              }
+            ],
+            "currentTab": 3
+          }
+        ],
+        "direction": "horizontal",
+        "width": 756.5,
+        "collapsed": true
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "markdown-importer:Open format converter": false,
+          "templates:Insert template": false,
+          "workspaces:Manage workspace layouts": false,
+          "canvas:Create new canvas": false,
+          "switcher:Open quick switcher": true,
+          "graph:Open graph view": false,
+          "daily-notes:Open today's daily note": true,
+          "command-palette:Open command palette": true,
+          "random-note:Open random note": false,
+          "mesh-ai:Mesh AI Integration": false,
+          "templater-obsidian:Templater": false,
+          "obsidian888-nns:Open AI Console": false,
+          "obsidian-excalidraw-plugin:New drawing": false,
+          "obsidian42-brat:BRAT": false,
+          "code-files:Create Code File": false,
+          "cmdr:Search: Search in all files": false,
+          "obsidian-kit:PublishKit": false,
+          "obsidian-kanban:Create new board": false,
+          "card-board:CardBoard": false
+        }
+      },
+      "active": "2927b6cf2eccb8c2",
+      "mtime": "2025-06-09T11:43:13+08:00"
+    }
+  },
+  "active": "cw_ [ working on minigame]"
+}

@@ -1,0 +1,11 @@
+
+
+div[data-path$='@eaDir']
+{
+	display: none;
+}
+
+div[data-path$='_setup']
+{
+	display: none;
+}

@@ -1,0 +1,19 @@
+{
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "_setup",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "NOTES/ALL",
+  "alwaysUpdateLinks": true,
+  "propertiesInDocument": "hidden",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A3",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "promptDelete": true,
+  "strictLineBreaks": true,
+  "": "on",
+  "undefined": "on"
+}

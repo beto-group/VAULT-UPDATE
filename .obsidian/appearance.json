@@ -1,0 +1,10 @@
+{
+  "accentColor": "#9058d0",
+  "baseFontSize": 16,
+  "translucency": false,
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "hide-nas-folders"
+  ],
+  "cssTheme": "Minimal"
+}
