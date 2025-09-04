@@ -1,5 +1,5 @@
 ---
-versions: 1.0.0
+version: 1.0.0
 ---
 # BETO.888 - An Evolving Obsidian Experience
 
