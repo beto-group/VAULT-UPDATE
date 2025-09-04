@@ -12,7 +12,6 @@ const ICONS = [{ name: "Notification Bell", svg: `<svg xmlns="http://www.w3.org/
 const AnimatedIcon = ({ svgString, isActive, isInView }) => { const iconRef = useRef(null); const intervalRef = useRef(null); const timeoutRef = useRef(null); const pathsRef = useRef([]); const [hasRevealed, setHasRevealed] = useState(false); const DURATION = 1.0; useEffect(() => { const container = iconRef.current; if (!container || !svgString) return; container.innerHTML = svgString; const svgElement = container.querySelector('svg'); if (!svgElement) return; pathsRef.current = svgElement.querySelectorAll('[class*="svg-elem-"]'); pathsRef.current.forEach((path, index) => { const delay = 0.1 * index; const length = path.getTotalLength(); if (length > 0) { path.style.strokeDasharray = length; path.style.strokeDashoffset = length; path.style.stroke = 'var(--text-normal)'; path.style.strokeWidth = '1.5px'; path.style.fill = 'transparent'; path.style.transition = `stroke-dashoffset ${DURATION}s ease ${delay}s, fill ${DURATION * 0.7}s ease ${delay + (DURATION * 0.2)}s`; } }); }, [svgString]); useEffect(() => { if (isInView && !hasRevealed) { const paths = pathsRef.current; if (!paths || paths.length === 0) return; const maxDelay = 0.1 * (paths.length - 1); const totalRevealTime = (DURATION + maxDelay) * 1000; paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); setTimeout(() => setHasRevealed(true), totalRevealTime); } }, [isInView, hasRevealed]); useEffect(() => { if (!hasRevealed) return; const paths = pathsRef.current; if (!paths || paths.length === 0) return; const maxDelay = 0.1 * (paths.length - 1); const totalAnimationTime = (DURATION + maxDelay) * 1000; const runAnimationCycle = () => { paths.forEach(path => { path.style.strokeDashoffset = path.getTotalLength(); path.style.fill = 'transparent'; }); timeoutRef.current = setTimeout(() => { paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); }, totalAnimationTime * 0.88); }; if (isActive) { runAnimationCycle(); intervalRef.current = setInterval(runAnimationCycle, totalAnimationTime * 2); } else { paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); } return () => { clearInterval(intervalRef.current); clearTimeout(timeoutRef.current); }; }, [isActive, hasRevealed]); return <div ref={iconRef} style={{ width: '100%', height: '100%' }} />; };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-
 // =================================================================================
 // --- UPDATER LOGIC (With Changelog Parsing) ---
 // =================================================================================
@@ -21,54 +20,35 @@ const GITHUB_OWNER = 'beto-group';
 const GITHUB_REPO = 'VAULT-UPDATE';
 const GITHUB_BRANCH = 'main';
 const LOG_PREFIX = '[VaultUpdater]';
+const FILENAME = 'CHANGE LOG.md';
 
 function compareSemVer(a, b) { const partsA = a.split('.').map(Number); const partsB = b.split('.').map(Number); const len = Math.max(partsA.length, partsB.length); for (let i = 0; i < len; i++) { const numA = partsA[i] || 0; const numB = partsB[i] || 0; if (numA > numB) return 1; if (numA < numB) return -1; } return 0; }
-function parseVersionFromYaml(markdownContent) { const yamlMatch = markdownContent.match(/^---\s*([\s\S]*?)\s*---/); if (!yamlMatch) return null; const yaml = yamlMatch[1]; const versionMatch = yaml.match(/^version:\s*["']?(.+?)["']?$/m); return versionMatch ? versionMatch[1] : null; }
+function parseVersionFromYaml(markdownContent) { if (!markdownContent) return null; const yamlMatch = markdownContent.match(/^---\s*([\s\S]*?)\s*---/); if (!yamlMatch) return null; const yaml = yamlMatch[1]; const versionMatch = yaml.match(/^version:\s*["']?(.+?)["']?$/m); return versionMatch ? versionMatch[1] : null; }
+function parseLatestChangelogEntry(markdownContent) { if (!markdownContent) return null; try { const footerMarker = '>[!example]- GENERAL INFO'; const footerIndex = markdownContent.indexOf(footerMarker); let content = footerIndex !== -1 ? markdownContent.substring(0, footerIndex) : markdownContent; const firstEntryIndex = content.search(/^## [A-Z]+-\d+/m); if (firstEntryIndex === -1) return null; content = content.substring(firstEntryIndex); const entries = content.split(/\n----\n/); return entries[0].trim(); } catch (error) { console.error(`${LOG_PREFIX} Failed to parse changelog:`, error); return "Could not parse changelog. Please check the `CHANGE LOG.md` file."; } }
 
-function parseLatestChangelogEntry(markdownContent) {
-    if (!markdownContent) return null;
-    try {
-        const footerMarker = '>[!example]- GENERAL INFO';
-        const footerIndex = markdownContent.indexOf(footerMarker);
-        let content = footerIndex !== -1 ? markdownContent.substring(0, footerIndex) : markdownContent;
-        const firstEntryIndex = content.search(/^## [A-Z]+-\d+/m);
-        if (firstEntryIndex === -1) return null;
-        content = content.substring(firstEntryIndex);
-        const entries = content.split(/\n----\n/);
-        return entries[0].trim();
-    } catch (error) {
-        console.error(`${LOG_PREFIX} Failed to parse changelog:`, error);
-        return "Could not parse changelog. Please check the `CHANGELOG.md` file.";
-    }
-}
-
-// --- MODIFIED --- Fetches and parses CHANGELOG.md to check for updates and get the latest entry.
 async function checkForUpdates() {
     console.log(`${LOG_PREFIX} Starting update check...`);
     try {
-        const remoteChangelogUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/CHANGELOG.md?cache-bust=${new Date().getTime()}`;
-        console.log(`${LOG_PREFIX} Fetching remote CHANGELOG from: ${remoteChangelogUrl}`);
-        const response = await requestUrl({ url: remoteChangelogUrl, method: 'GET' });
-        if (response.status !== 200) { throw new Error(`Failed to fetch CHANGELOG.md. Status: ${response.status}`); }
+        const remoteUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${encodeURIComponent(FILENAME)}?cache-bust=${new Date().getTime()}`;
+        console.log(`${LOG_PREFIX} Fetching remote CHANGELOG from: ${remoteUrl}`);
+        const response = await requestUrl({ url: remoteUrl, method: 'GET' });
+        if (response.status !== 200) { throw new Error(`Failed to fetch ${FILENAME}. Status: ${response.status}`); }
         const remoteContent = response.text;
-        
         const remoteVersion = parseVersionFromYaml(remoteContent);
-        if (!remoteVersion) throw new Error("Could not find version in remote CHANGELOG.md");
-
-        const changelogEntry = parseLatestChangelogEntry(remoteContent);
-
+        if (!remoteVersion) throw new Error(`Could not find version in remote ${FILENAME}`);
         let localVersion = '0.0.0';
-        const localReadmeFile = dc.app.vault.getAbstractFileByPath('README.md');
-        if (localReadmeFile) { localVersion = dc.app.metadataCache.getFileCache(localReadmeFile)?.frontmatter?.version || '0.0.0'; }
-        
+        const localFile = dc.app.vault.getAbstractFileByPath(FILENAME);
+        if (localFile) {
+            const localContent = await dc.app.vault.read(localFile);
+            localVersion = parseVersionFromYaml(localContent) || '0.0.0';
+        }
         const updateAvailable = compareSemVer(remoteVersion, localVersion) > 0;
         console.log(`${LOG_PREFIX} Comparison: remote='${remoteVersion}', local='${localVersion}'. Update available: ${updateAvailable}`);
-        
-        return { updateAvailable, remoteVersion, localVersion, changelogEntry };
+        return { updateAvailable, remoteVersion, localVersion };
     } catch (error) {
         console.error(`${LOG_PREFIX} Error during update check:`, error);
         new Notice("Could not check for updates. See console for details.", 4000);
-        return { updateAvailable: false, remoteVersion: 'unknown', localVersion: 'unknown', changelogEntry: null };
+        return { updateAvailable: false, remoteVersion: 'unknown', localVersion: 'unknown' };
     }
 }
 
@@ -81,10 +61,7 @@ async function downloadLatestFromRepo() {
         if (treeResponse.status !== 200) throw new Error(`Failed to fetch file tree. Status: ${treeResponse.status}`);
         treeData = treeResponse.json;
         if (!treeData || !treeData.tree) throw new Error("Invalid tree data from GitHub API.");
-    } catch (e) {
-        console.error(`${LOG_PREFIX} Failed to fetch repo file tree.`, e);
-        throw new Error("Could not retrieve file list from repository.");
-    }
+    } catch (e) { console.error(`${LOG_PREFIX} Failed to fetch repo file tree.`, e); throw new Error("Could not retrieve file list from repository."); }
     const filesToDownload = treeData.tree.filter(item => item.type === 'blob');
     const filePromises = filesToDownload.map(async (file) => {
         try {
@@ -99,18 +76,28 @@ async function downloadLatestFromRepo() {
     return downloadedFiles;
 }
 
-async function getCurrentVaultState(trackedFilePaths) { const vaultFiles = []; for (const path of trackedFilePaths) { try { const content = await dc.app.vault.adapter.read(path); vaultFiles.push({ path, content }); } catch (error) { /* File doesn't exist locally, which is fine */ } } return vaultFiles; }
+async function getCurrentVaultState(trackedFilePaths) { const vaultFiles = []; for (const path of trackedFilePaths) { try { const content = await dc.app.vault.adapter.read(path); vaultFiles.push({ path, content }); } catch (error) {} } return vaultFiles; }
 function compareVersions(latestFiles, currentFiles) { const latestFileMap = new Map(latestFiles.map(f => [f.path, f.content])); const currentFileMap = new Map(currentFiles.map(f => [f.path, f.content])); const newFiles = []; const updatedFiles = []; for (const [path, content] of latestFileMap.entries()) { if (!currentFileMap.has(path)) { newFiles.push({ path, content }); } else if (currentFileMap.get(path) !== content) { updatedFiles.push({ path, content }); } } return { newFiles, updatedFiles, userModified: [] }; }
 
 // =================================================================================
 // --- Main View Component ---
 // =================================================================================
-function BasicView() {
+function BasicView({ onReloadRequest }) {
   const uniqueWrapperClass = "interactive-wrapper-" + useRef(Math.random().toString(36).substr(2, 9)).current;
   const STYLES = {
-    injectedStyles: `.${uniqueWrapperClass}:hover .subtle-icon { opacity: 0.7; transform: scale(1); } .${uniqueWrapperClass} .promo-banner:hover { transform: scale(1.02); box-shadow: 0 0 90px -15px rgba(200, 160, 255, 0.4); } @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } } @keyframes scaleIn { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } } .modal-fade-in { animation: fadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); } .modal-scale-in { animation: scaleIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); } @keyframes betReveal { 0% { opacity: 0; transform: scale(0.7) rotate(-10deg); } 70% { opacity: 1; transform: scale(1.1) rotate(5deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } } .bet-reveal { animation: betReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; }`,
+    injectedStyles: `
+      .${uniqueWrapperClass}:hover .subtle-icon, .${uniqueWrapperClass}:hover .reload-button { opacity: 0.7; transform: scale(1); }
+      .${uniqueWrapperClass} .promo-banner:hover { transform: scale(1.02); box-shadow: 0 0 90px -15px rgba(200, 160, 255, 0.4); }
+      .reload-button:hover { background-color: var(--background-modifier-hover); opacity: 1; transform: scale(1.05); }
+      .reload-button:active { transform: scale(0.95); }
+      @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } } @keyframes scaleIn { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } }
+      .modal-fade-in { animation: fadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); } .modal-scale-in { animation: scaleIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
+      @keyframes betReveal { 0% { opacity: 0; transform: scale(0.7) rotate(-10deg); } 70% { opacity: 1; transform: scale(1.1) rotate(5deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } }
+      .bet-reveal { animation: betReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; }`,
     fullTabWrapper: { position: 'relative', height: "100%", width: "100%", padding: "20px", boxSizing: "border-box", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "25px", backgroundColor: "var(--background-secondary)", border: "1px solid var(--background-modifier-border)", borderRadius: "8px", color: "var(--text-normal)", transition: "background-color 0.2s ease", },
     icon: { position: "absolute", top: "15px", right: "20px", fontFamily: "monospace", fontSize: "14px", color: "var(--text-faint)", userSelect: "none", cursor: "pointer", opacity: 0, transform: "scale(0.9)", transition: "opacity 0.2s ease-in-out, transform 0.2s ease-in-out", zIndex: 10, },
+    // --- NEW --- Reload button styles
+    reloadButton: { position: "absolute", top: "12px", right: "50px", zIndex: 10, width: "30px", height: "30px", borderRadius: "50%", border: "none", display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer", color: "var(--text-faint)", backgroundColor: 'transparent', outline: "none", padding: 0, opacity: 0, transform: "scale(0.9)", transition: "opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease", },
     title: { fontSize: "2em", fontWeight: "600", color: "var(--text-normal)" },
     subtitle: { fontSize: "1em", color: "var(--text-muted)", maxWidth: "400px", textAlign: "center" },
     promoBanner: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', padding: "20px 30px", borderRadius: "16px", width: 'min(100%, 500px)', background: 'rgba(24, 15, 28, 0.5)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 0 80px -20px rgba(200, 160, 255, 0.3)', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease', },
@@ -148,7 +135,6 @@ function BasicView() {
   const handleOpenModal = () => { if (!updateCheck.info?.updateAvailable) return; setModalStage('confirmation'); setIsModalOpen(true); };
   const handleCloseModal = () => setIsModalOpen(false);
   
-  // --- MODIFIED --- Uses the changelog that was already fetched during the initial check.
   const handleStartUpdate = async () => {
     setModalStage('bet');
     await sleep(1000);
@@ -156,21 +142,18 @@ function BasicView() {
         setModalStage('processing');
         setUpdateStatus('downloading');
         const latestFiles = await downloadLatestFromRepo();
-
         setUpdateStatus('comparing');
-        const changelogEntry = updateCheck.info?.changelogEntry;
+        const changelogFile = latestFiles.find(f => f.path === FILENAME);
+        const changelogEntry = changelogFile ? parseLatestChangelogEntry(changelogFile.content) : null;
         const trackedFilePaths = latestFiles.map(f => f.path);
         const currentFiles = await getCurrentVaultState(trackedFilePaths);
         const results = compareVersions(latestFiles, currentFiles);
         setUpdateResult({ ...results, changelogEntry });
-
         setUpdateStatus('writing');
         const allFilesToWrite = [...results.newFiles, ...results.updatedFiles];
         for (const file of allFilesToWrite) {
             const parentDir = file.path.substring(0, file.path.lastIndexOf('/'));
-            if (parentDir && !await dc.app.vault.adapter.exists(parentDir)) {
-                await dc.app.vault.createFolder(parentDir);
-            }
+            if (parentDir && !await dc.app.vault.adapter.exists(parentDir)) { await dc.app.vault.createFolder(parentDir); }
             await dc.app.vault.adapter.write(file.path, file.content);
         }
         new Notice(`Update to v${updateCheck.info.remoteVersion} complete!`, 5000);
@@ -187,45 +170,36 @@ function BasicView() {
   const handleExitFullTab = (e) => { e.stopPropagation(); setIsFullTab(false); };
   const handleEnterFullTab = () => setIsFullTab(true);
   const handleCopyPath = () => { try { const activeFile = dc.app.workspace.getActiveFile(); if (activeFile) { navigator.clipboard.writeText(activeFile.path); new Notice(`Path copied`, 3000); } else { new Notice("Could not determine path.", 3000); } } catch (error) { new Notice("Error copying path.", 3000); } };
-  const renderBannerContent = () => { if (updateCheck.status === 'checking') { return { title: "Checking for Updates...", text: "Please wait a moment." }; } if (updateCheck.info?.updateAvailable) { return { title: `Update Available: v${updateCheck.info.remoteVersion}`, text: `You are on v${updateCheck.info.localVersion}. Click to see changes and upgrade.` }; } return { title: "You are Up-to-Date!", text: `You have the latest version: v${updateCheck.info.localVersion}` }; };
+  const renderBannerContent = () => { if (updateCheck.status === 'checking') { return { title: "Checking for Updates...", text: "Please wait a moment." }; } if (updateCheck.info?.updateAvailable) { return { title: `Update Available: v${updateCheck.info.remoteVersion}`, text: `You are on v${updateCheck.info.localVersion}. Click to upgrade.` }; } return { title: "You are Up-to-Date!", text: `You have the latest version: v${updateCheck.info.localVersion}` }; };
   
-  // --- MODIFIED --- The 'confirmation' stage now includes a changelog preview.
   const renderModalContent = () => {
     switch (modalStage) {
-      case 'confirmation': return (<>
-        <h3 style={STYLES.modalTitle}>{CONTENT.modalTitle}</h3>
-        <p style={STYLES.modalText}>You are about to update from <b>v{updateCheck.info.localVersion}</b> to <b>v{updateCheck.info.remoteVersion}</b>.</p>
-        <p style={{...STYLES.modalText, margin: '5px 0', fontWeight: '500', textAlign: 'left', width: '100%'}}>Here's what's new:</p>
-        <div style={STYLES.changelogContent}>
-            {updateCheck.info?.changelogEntry || "Could not load changelog details."}
-        </div>
-        <div style={{...STYLES.buttonGroup, marginTop: '20px'}}>
-            <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCloseModal}>Cancel</button>
-            <button style={STYLES.button} onClick={handleStartUpdate} onMouseEnter={() => setIsConfirmHovered(true)} onMouseLeave={() => setIsConfirmHovered(false)}>Confirm Update</button>
-        </div>
-        <p style={{ ...STYLES.hoverRevealText, opacity: isConfirmHovered ? 1 : 0, transform: isConfirmHovered ? 'translateY(0)' : 'translateY(5px)' }}>bro you trust me ?</p>
-      </>);
+      case 'confirmation': return (<> <h3 style={STYLES.modalTitle}>{CONTENT.modalTitle}</h3> <p style={STYLES.modalText}>You are about to update from <b>v{updateCheck.info.localVersion}</b> to <b>v{updateCheck.info.remoteVersion}</b>. This will overwrite existing files.</p> <div style={STYLES.buttonGroup}> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCloseModal}>Cancel</button> <button style={STYLES.button} onClick={handleStartUpdate} onMouseEnter={() => setIsConfirmHovered(true)} onMouseLeave={() => setIsConfirmHovered(false)}>Confirm Update</button> </div> <p style={{ ...STYLES.hoverRevealText, opacity: isConfirmHovered ? 1 : 0, transform: isConfirmHovered ? 'translateY(0)' : 'translateY(5px)' }}>bro you trust me ?</p> </>);
       case 'bet': return <div className="bet-reveal"><h1 style={STYLES.betText}>BET 🫡</h1></div>;
       case 'processing': return (<> <h3 style={STYLES.modalTitle}>Upgrading...</h3> <p style={STYLES.modalText}>{updateStatus === 'downloading' ? 'Downloading latest version...' : (updateStatus === 'comparing' ? 'Comparing files...' : 'Applying changes...')}</p> </>);
-      case 'results': return (<>
-        <h3 style={STYLES.modalTitle}>Update to v{updateCheck.info.remoteVersion} Complete!</h3>
-        <p style={STYLES.modalText}>Here's what's new in this version:</p>
-        <div style={STYLES.changelogContent}>
-            {updateResult?.changelogEntry || "No changelog entry could be found."}
-        </div>
-        <div style={{...STYLES.buttonGroup, marginTop: '15px'}}>
-            <button style={STYLES.button} onClick={handleCloseModal}>Finish</button>
-        </div>
-        </>);
+      case 'results': return (<> <h3 style={STYLES.modalTitle}>Update to v{updateCheck.info.remoteVersion} Complete!</h3> <p style={STYLES.modalText}>Here's what's new in this version:</p> <div style={STYLES.changelogContent}>{updateResult?.changelogEntry || "No changelog entry could be found."}</div> <div style={{...STYLES.buttonGroup, marginTop: '15px'}}> <button style={STYLES.button} onClick={handleCloseModal}>Finish</button> </div> </>);
       default: return null;
     }
   }
 
   const bannerContent = renderBannerContent();
-  return ( <div ref={containerRef}> <style>{STYLES.injectedStyles}</style> {isModalOpen && <div style={STYLES.modalOverlay} className="modal-fade-in"><div style={STYLES.modalContent} className="modal-scale-in">{renderModalContent()}</div></div>} {isFullTab ? ( <div style={STYLES.fullTabWrapper} className={uniqueWrapperClass}> <span style={STYLES.icon} className="subtle-icon" title="Exit Full Tab" onClick={handleExitFullTab}>&lt;/&gt;</span> <h2 style={STYLES.title}>{CONTENT.title}</h2><p style={STYLES.subtitle}>{CONTENT.subtitle}</p> <div style={{...STYLES.promoBanner, cursor: updateCheck.info?.updateAvailable ? 'pointer' : 'default', opacity: updateCheck.status === 'checking' ? 0.7 : 1}} className="promo-banner" onClick={handleOpenModal}> <div style={STYLES.promoIconContainer}><AnimatedIcon svgString={ICONS[0].svg} isActive={updateCheck.info?.updateAvailable} isInView={true} /></div> <div style={STYLES.bannerTextContainer}> <h3 style={STYLES.bannerTitle}>{bannerContent.title}</h3><p style={STYLES.bannerText}>{bannerContent.text}</p> </div> </div> </div> ) : ( <div style={STYLES.compactWrapper}> <p style={STYLES.compactText}>Component is in compact mode.</p> <div style={STYLES.buttonGroup}> <button style={STYLES.button} onClick={handleEnterFullTab}>Enter Full Tab</button> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCopyPath}>Find Codeblock</button> </div> </div> )} </div> );
+  return ( <div ref={containerRef}> <style>{STYLES.injectedStyles}</style> {isModalOpen && <div style={STYLES.modalOverlay} className="modal-fade-in"><div style={STYLES.modalContent} className="modal-scale-in">{renderModalContent()}</div></div>} {isFullTab ? ( <div style={STYLES.fullTabWrapper} className={uniqueWrapperClass}> <span style={STYLES.icon} className="subtle-icon" title="Exit Full Tab" onClick={handleExitFullTab}>&lt;/&gt;</span> {/* --- NEW --- Reload Button */} <button onClick={onReloadRequest} className="reload-button" style={STYLES.reloadButton} aria-label="Reload Component" title="Reload Component"> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ transform: 'rotate(60deg)' }}> <path d="M23 4v6h-6"></path> <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path> </svg> </button> <h2 style={STYLES.title}>{CONTENT.title}</h2><p style={STYLES.subtitle}>{CONTENT.subtitle}</p> <div style={{...STYLES.promoBanner, cursor: updateCheck.info?.updateAvailable ? 'pointer' : 'default', opacity: updateCheck.status === 'checking' ? 0.7 : 1}} className="promo-banner" onClick={handleOpenModal}> <div style={STYLES.promoIconContainer}><AnimatedIcon svgString={ICONS[0].svg} isActive={updateCheck.info?.updateAvailable} isInView={true} /></div> <div style={STYLES.bannerTextContainer}> <h3 style={STYLES.bannerTitle}>{bannerContent.title}</h3><p style={STYLES.bannerText}>{bannerContent.text}</p> </div> </div> </div> ) : ( <div style={STYLES.compactWrapper}> <p style={STYLES.compactText}>Component is in compact mode.</p> <div style={STYLES.buttonGroup}> <button style={STYLES.button} onClick={handleEnterFullTab}>Enter Full Tab</button> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCopyPath}>Find Codeblock</button> </div> </div> )} </div> );
 };
 
-return { BasicView };
+// --- NEW --- Parent container to manage the reload state
+function BasicViewContainer() {
+    const [refreshKey, setRefreshKey] = useState(0);
+
+    const handleHardReset = () => {
+        new Notice('Reloading component...');
+        setRefreshKey(prevKey => prevKey + 1);
+    };
+
+    return <BasicView key={refreshKey} onReloadRequest={handleHardReset} />;
+}
+
+// --- MODIFIED --- Export the container instead of the view directly
+return { BasicView: BasicViewContainer };
 ```
 
 

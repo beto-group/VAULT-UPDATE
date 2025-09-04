@@ -6,6 +6,7 @@
       {
         "id": "8193fe2b2a62ea23",
         "type": "tabs",
+        "dimension": 36.36363636363637,
         "children": [
           {
             "id": "08f07894d4d41c06",
@@ -26,6 +27,7 @@
       {
         "id": "7ffb8bfe2e164e84",
         "type": "tabs",
+        "dimension": 63.63636363636363,
         "children": [
           {
             "id": "36e68549c8ec8ccf",
@@ -55,8 +57,7 @@
               "title": "GithubReleaseUpdate.viewer.v1"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,10 +130,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "GithubReleaseUpdate.viewer.v1.md"
+                "file": "CHANGE LOG.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for GithubReleaseUpdate.viewer.v1"
+              "title": "File properties for CHANGE LOG"
             }
           },
           {
@@ -184,7 +185,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "GithubReleaseUpdate.viewer.v1.md",
+                "file": "CHANGE LOG.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -212,7 +213,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of GithubReleaseUpdate.viewer.v1"
+              "title": "Graph of CHANGE LOG"
             }
           },
           {
@@ -304,7 +305,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 413.5
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -321,11 +322,11 @@
       "code-files:Create Code File": false
     }
   },
-  "active": "7913062685b5e557",
+  "active": "36e68549c8ec8ccf",
   "lastOpenFiles": [
-    "GithubReleaseUpdate.component.v1.md",
     "GithubReleaseUpdate.viewer.v1.md",
     "CHANGE LOG.md",
+    "GithubReleaseUpdate.component.v1.md",
     "README.md",
     "GLContextHandler.component.v1.md",
     "SVGAnimations.component.v3.md",
