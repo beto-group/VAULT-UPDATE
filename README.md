@@ -1,3 +1,6 @@
+---
+versions: 1.0.0
+---
 # BETO.888 - An Evolving Obsidian Experience
 
 ![BETO.888 Cover](_RESOURCES/GIF/beto.888.cover.gif)
