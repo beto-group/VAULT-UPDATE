@@ -12,8 +12,9 @@ const ICONS = [{ name: "Notification Bell", svg: `<svg xmlns="http://www.w3.org/
 const AnimatedIcon = ({ svgString, isActive, isInView }) => { const iconRef = useRef(null); const intervalRef = useRef(null); const timeoutRef = useRef(null); const pathsRef = useRef([]); const [hasRevealed, setHasRevealed] = useState(false); const DURATION = 1.0; useEffect(() => { const container = iconRef.current; if (!container || !svgString) return; container.innerHTML = svgString; const svgElement = container.querySelector('svg'); if (!svgElement) return; pathsRef.current = svgElement.querySelectorAll('[class*="svg-elem-"]'); pathsRef.current.forEach((path, index) => { const delay = 0.1 * index; const length = path.getTotalLength(); if (length > 0) { path.style.strokeDasharray = length; path.style.strokeDashoffset = length; path.style.stroke = 'var(--text-normal)'; path.style.strokeWidth = '1.5px'; path.style.fill = 'transparent'; path.style.transition = `stroke-dashoffset ${DURATION}s ease ${delay}s, fill ${DURATION * 0.7}s ease ${delay + (DURATION * 0.2)}s`; } }); }, [svgString]); useEffect(() => { if (isInView && !hasRevealed) { const paths = pathsRef.current; if (!paths || paths.length === 0) return; const maxDelay = 0.1 * (paths.length - 1); const totalRevealTime = (DURATION + maxDelay) * 1000; paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); setTimeout(() => setHasRevealed(true), totalRevealTime); } }, [isInView, hasRevealed]); useEffect(() => { if (!hasRevealed) return; const paths = pathsRef.current; if (!paths || paths.length === 0) return; const maxDelay = 0.1 * (paths.length - 1); const totalAnimationTime = (DURATION + maxDelay) * 1000; const runAnimationCycle = () => { paths.forEach(path => { path.style.strokeDashoffset = path.getTotalLength(); path.style.fill = 'transparent'; }); timeoutRef.current = setTimeout(() => { paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); }, totalAnimationTime * 0.88); }; if (isActive) { runAnimationCycle(); intervalRef.current = setInterval(runAnimationCycle, totalAnimationTime * 2); } else { paths.forEach(path => { path.style.strokeDashoffset = '0'; path.style.fill = 'var(--interactive-accent-tint)'; }); } return () => { clearInterval(intervalRef.current); clearTimeout(timeoutRef.current); }; }, [isActive, hasRevealed]); return <div ref={iconRef} style={{ width: '100%', height: '100%' }} />; };
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
+
 // =================================================================================
-// --- UPDATER LOGIC (With Cache-Busting) ---
+// --- UPDATER LOGIC (With Changelog Parsing) ---
 // =================================================================================
 
 const GITHUB_OWNER = 'beto-group';
@@ -24,26 +25,50 @@ const LOG_PREFIX = '[VaultUpdater]';
 function compareSemVer(a, b) { const partsA = a.split('.').map(Number); const partsB = b.split('.').map(Number); const len = Math.max(partsA.length, partsB.length); for (let i = 0; i < len; i++) { const numA = partsA[i] || 0; const numB = partsB[i] || 0; if (numA > numB) return 1; if (numA < numB) return -1; } return 0; }
 function parseVersionFromYaml(markdownContent) { const yamlMatch = markdownContent.match(/^---\s*([\s\S]*?)\s*---/); if (!yamlMatch) return null; const yaml = yamlMatch[1]; const versionMatch = yaml.match(/^version:\s*["']?(.+?)["']?$/m); return versionMatch ? versionMatch[1] : null; }
 
+function parseLatestChangelogEntry(markdownContent) {
+    if (!markdownContent) return null;
+    try {
+        const footerMarker = '>[!example]- GENERAL INFO';
+        const footerIndex = markdownContent.indexOf(footerMarker);
+        let content = footerIndex !== -1 ? markdownContent.substring(0, footerIndex) : markdownContent;
+        const firstEntryIndex = content.search(/^## [A-Z]+-\d+/m);
+        if (firstEntryIndex === -1) return null;
+        content = content.substring(firstEntryIndex);
+        const entries = content.split(/\n----\n/);
+        return entries[0].trim();
+    } catch (error) {
+        console.error(`${LOG_PREFIX} Failed to parse changelog:`, error);
+        return "Could not parse changelog. Please check the `CHANGELOG.md` file.";
+    }
+}
+
+// --- MODIFIED --- Fetches and parses CHANGELOG.md to check for updates and get the latest entry.
 async function checkForUpdates() {
     console.log(`${LOG_PREFIX} Starting update check...`);
     try {
-        const remoteReadmeUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/README.md?cache-bust=${new Date().getTime()}`;
-        console.log(`${LOG_PREFIX} Fetching remote README from: ${remoteReadmeUrl}`);
-        const response = await requestUrl({ url: remoteReadmeUrl, method: 'GET' });
-        if (response.status !== 200) { throw new Error(`Failed to fetch README.md. Status: ${response.status}`); }
+        const remoteChangelogUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/CHANGELOG.md?cache-bust=${new Date().getTime()}`;
+        console.log(`${LOG_PREFIX} Fetching remote CHANGELOG from: ${remoteChangelogUrl}`);
+        const response = await requestUrl({ url: remoteChangelogUrl, method: 'GET' });
+        if (response.status !== 200) { throw new Error(`Failed to fetch CHANGELOG.md. Status: ${response.status}`); }
         const remoteContent = response.text;
+        
         const remoteVersion = parseVersionFromYaml(remoteContent);
-        if (!remoteVersion) throw new Error("Could not find version in remote README.md");
+        if (!remoteVersion) throw new Error("Could not find version in remote CHANGELOG.md");
+
+        const changelogEntry = parseLatestChangelogEntry(remoteContent);
+
         let localVersion = '0.0.0';
         const localReadmeFile = dc.app.vault.getAbstractFileByPath('README.md');
         if (localReadmeFile) { localVersion = dc.app.metadataCache.getFileCache(localReadmeFile)?.frontmatter?.version || '0.0.0'; }
+        
         const updateAvailable = compareSemVer(remoteVersion, localVersion) > 0;
         console.log(`${LOG_PREFIX} Comparison: remote='${remoteVersion}', local='${localVersion}'. Update available: ${updateAvailable}`);
-        return { updateAvailable, remoteVersion, localVersion };
+        
+        return { updateAvailable, remoteVersion, localVersion, changelogEntry };
     } catch (error) {
         console.error(`${LOG_PREFIX} Error during update check:`, error);
         new Notice("Could not check for updates. See console for details.", 4000);
-        return { updateAvailable: false, remoteVersion: 'unknown', localVersion: 'unknown' };
+        return { updateAvailable: false, remoteVersion: 'unknown', localVersion: 'unknown', changelogEntry: null };
     }
 }
 
@@ -80,31 +105,12 @@ function compareVersions(latestFiles, currentFiles) { const latestFileMap = new 
 // =================================================================================
 // --- Main View Component ---
 // =================================================================================
-function BasicView({ onReloadRequest }) { // <-- Accepts the reload function as a prop
+function BasicView() {
   const uniqueWrapperClass = "interactive-wrapper-" + useRef(Math.random().toString(36).substr(2, 9)).current;
   const STYLES = {
-    injectedStyles: `
-      .${uniqueWrapperClass}:hover .subtle-icon { opacity: 0.7; transform: scale(1); }
-      .${uniqueWrapperClass} .promo-banner:hover { transform: scale(1.02); box-shadow: 0 0 90px -15px rgba(200, 160, 255, 0.4); }
-      .reload-button:hover { background-color: var(--background-modifier-hover); transform: scale(1.05); }
-      .reload-button:active { transform: scale(0.95); }
-      @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
-      @keyframes scaleIn { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } }
-      .modal-fade-in { animation: fadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
-      .modal-scale-in { animation: scaleIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); }
-      @keyframes betReveal { 0% { opacity: 0; transform: scale(0.7) rotate(-10deg); } 70% { opacity: 1; transform: scale(1.1) rotate(5deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } }
-      .bet-reveal { animation: betReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; }`,
+    injectedStyles: `.${uniqueWrapperClass}:hover .subtle-icon { opacity: 0.7; transform: scale(1); } .${uniqueWrapperClass} .promo-banner:hover { transform: scale(1.02); box-shadow: 0 0 90px -15px rgba(200, 160, 255, 0.4); } @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } } @keyframes scaleIn { from { transform: scale(.96); opacity: 0 } to { transform: scale(1); opacity: 1 } } .modal-fade-in { animation: fadeIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); } .modal-scale-in { animation: scaleIn 0.4s cubic-bezier(0.25, 1, 0.5, 1); } @keyframes betReveal { 0% { opacity: 0; transform: scale(0.7) rotate(-10deg); } 70% { opacity: 1; transform: scale(1.1) rotate(5deg); } 100% { opacity: 1; transform: scale(1) rotate(0deg); } } .bet-reveal { animation: betReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards; }`,
     fullTabWrapper: { position: 'relative', height: "100%", width: "100%", padding: "20px", boxSizing: "border-box", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "25px", backgroundColor: "var(--background-secondary)", border: "1px solid var(--background-modifier-border)", borderRadius: "8px", color: "var(--text-normal)", transition: "background-color 0.2s ease", },
     icon: { position: "absolute", top: "15px", right: "20px", fontFamily: "monospace", fontSize: "14px", color: "var(--text-faint)", userSelect: "none", cursor: "pointer", opacity: 0, transform: "scale(0.9)", transition: "opacity 0.2s ease-in-out, transform 0.2s ease-in-out", zIndex: 10, },
-    // --- NEW --- Styles for the reload button
-    reloadButton: {
-        position: "absolute", top: "12px", right: "50px", zIndex: 10,
-        width: "30px", height: "30px", borderRadius: "50%", border: "none",
-        display: "flex", justifyContent: "center", alignItems: "center",
-        cursor: "pointer", color: "var(--text-faint)", outline: "none",
-        padding: 0, opacity: 1, transform: "scale(1)",
-        backgroundColor: 'transparent', transition: 'background-color 0.2s ease, transform 0.2s ease',
-    },
     title: { fontSize: "2em", fontWeight: "600", color: "var(--text-normal)" },
     subtitle: { fontSize: "1em", color: "var(--text-muted)", maxWidth: "400px", textAlign: "center" },
     promoBanner: { display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px', padding: "20px 30px", borderRadius: "16px", width: 'min(100%, 500px)', background: 'rgba(24, 15, 28, 0.5)', border: '1px solid rgba(255, 255, 255, 0.1)', boxShadow: '0 0 80px -20px rgba(200, 160, 255, 0.3)', cursor: 'pointer', transition: 'transform 0.3s ease, box-shadow 0.3s ease', },
@@ -113,15 +119,12 @@ function BasicView({ onReloadRequest }) { // <-- Accepts the reload function as 
     bannerTitle: { margin: '0 0 5px 0', fontSize: '1.2em', fontWeight: 600, color: 'var(--text-normal)' },
     bannerText: { margin: 0, color: 'var(--text-muted)', fontSize: '0.9em' },
     modalOverlay: { position: 'fixed', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(12px) saturate(1.2)', zIndex: 9999, },
-    modalContent: { display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center', width: 'min(100%, 95vw)', maxWidth: '450px', minHeight: '220px', justifyContent: 'center', padding: '30px', boxSizing: 'border-box', background: 'rgba(24, 15, 28, 0.7)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', boxShadow: '0 0 80px -20px rgba(200, 160, 255, 0.3)', overflow: 'hidden', textAlign: 'left' },
+    modalContent: { display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center', width: 'min(100%, 95vw)', maxWidth: '500px', minHeight: '220px', justifyContent: 'center', padding: '30px', boxSizing: 'border-box', background: 'rgba(24, 15, 28, 0.7)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '16px', boxShadow: '0 0 80px -20px rgba(200, 160, 255, 0.3)', overflow: 'hidden', textAlign: 'left' },
     modalTitle: { margin: 0, fontSize: '1.5em', fontWeight: 600, color: 'var(--text-normal)', textAlign: 'center' },
     modalText: { margin: '0 0 10px 0', color: 'var(--text-muted)', textAlign: 'center' },
+    changelogContent: { background: 'var(--background-primary)', padding: '15px', borderRadius: '8px', width: '100%', maxHeight: '40vh', overflowY: 'auto', whiteSpace: 'pre-wrap', textAlign: 'left', fontFamily: 'monospace', fontSize: '12px', border: '1px solid var(--background-modifier-border)', },
     hoverRevealText: { color: 'var(--text-faint)', fontSize: '12px', fontStyle: 'italic', height: '15px', textAlign: 'center', transition: 'opacity 0.3s ease, transform 0.3s ease', opacity: 0, transform: 'translateY(5px)', },
     betText: { fontSize: '3.5em', fontWeight: 'bold', color: 'var(--text-normal)', userSelect: 'none', },
-    resultList: { listStyle: 'none', padding: 0, margin: '5px 0', fontSize: '14px' },
-    resultItem: { color: 'var(--text-muted)' },
-    resultItemNew: { color: 'var(--text-success)' },
-    resultItemUpdate: { color: 'var(--text-warning)' },
     compactWrapper: { padding: "16px", boxSizing: "border-box", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "12px", border: "1px dashed var(--background-modifier-border)", borderRadius: "8px", backgroundColor: "var(--background-primary-alt)", },
     compactText: { margin: 0, color: "var(--text-muted)", fontSize: "14px" },
     buttonGroup: { display: "flex", gap: "10px", flexWrap: "wrap", justifyContent: "center" },
@@ -144,42 +147,85 @@ function BasicView({ onReloadRequest }) { // <-- Accepts the reload function as 
   useEffect(() => { async function doUpdateCheck() { const result = await checkForUpdates(); setUpdateCheck({ status: 'checked', info: result }); } doUpdateCheck(); }, []);
   const handleOpenModal = () => { if (!updateCheck.info?.updateAvailable) return; setModalStage('confirmation'); setIsModalOpen(true); };
   const handleCloseModal = () => setIsModalOpen(false);
-  const handleStartUpdate = async () => { setModalStage('bet'); await sleep(1000); try { setModalStage('processing'); setUpdateStatus('downloading'); const latestFiles = await downloadLatestFromRepo(); setUpdateStatus('comparing'); const trackedFilePaths = latestFiles.map(f => f.path); const currentFiles = await getCurrentVaultState(trackedFilePaths); const results = compareVersions(latestFiles, currentFiles); setUpdateResult(results); setUpdateStatus('writing'); const allFilesToWrite = [...results.newFiles, ...results.updatedFiles]; for (const file of allFilesToWrite) { const parentDir = file.path.substring(0, file.path.lastIndexOf('/')); if (parentDir && !await dc.app.vault.adapter.exists(parentDir)) { await dc.app.vault.createFolder(parentDir); } await dc.app.vault.adapter.write(file.path, file.content); } new Notice(`Update to v${updateCheck.info.remoteVersion} complete!`, 5000); setUpdateStatus('success'); setModalStage('results'); } catch (error) { console.error("Update process failed:", error); setUpdateStatus('error'); new Notice("Update process failed. Check console for details.", 5000); handleCloseModal(); } };
+  
+  // --- MODIFIED --- Uses the changelog that was already fetched during the initial check.
+  const handleStartUpdate = async () => {
+    setModalStage('bet');
+    await sleep(1000);
+    try {
+        setModalStage('processing');
+        setUpdateStatus('downloading');
+        const latestFiles = await downloadLatestFromRepo();
+
+        setUpdateStatus('comparing');
+        const changelogEntry = updateCheck.info?.changelogEntry;
+        const trackedFilePaths = latestFiles.map(f => f.path);
+        const currentFiles = await getCurrentVaultState(trackedFilePaths);
+        const results = compareVersions(latestFiles, currentFiles);
+        setUpdateResult({ ...results, changelogEntry });
+
+        setUpdateStatus('writing');
+        const allFilesToWrite = [...results.newFiles, ...results.updatedFiles];
+        for (const file of allFilesToWrite) {
+            const parentDir = file.path.substring(0, file.path.lastIndexOf('/'));
+            if (parentDir && !await dc.app.vault.adapter.exists(parentDir)) {
+                await dc.app.vault.createFolder(parentDir);
+            }
+            await dc.app.vault.adapter.write(file.path, file.content);
+        }
+        new Notice(`Update to v${updateCheck.info.remoteVersion} complete!`, 5000);
+        setUpdateStatus('success');
+        setModalStage('results');
+    } catch (error) {
+        console.error("Update process failed:", error);
+        setUpdateStatus('error');
+        new Notice("Update process failed. Check the console for details.", 5000);
+        handleCloseModal();
+    }
+  };
+
   const handleExitFullTab = (e) => { e.stopPropagation(); setIsFullTab(false); };
   const handleEnterFullTab = () => setIsFullTab(true);
   const handleCopyPath = () => { try { const activeFile = dc.app.workspace.getActiveFile(); if (activeFile) { navigator.clipboard.writeText(activeFile.path); new Notice(`Path copied`, 3000); } else { new Notice("Could not determine path.", 3000); } } catch (error) { new Notice("Error copying path.", 3000); } };
-  const renderBannerContent = () => { if (updateCheck.status === 'checking') { return { title: "Checking for Updates...", text: "Please wait a moment." }; } if (updateCheck.info?.updateAvailable) { return { title: `Update Available: v${updateCheck.info.remoteVersion}`, text: `You are on v${updateCheck.info.localVersion}. Click to upgrade.` }; } return { title: "You are Up-to-Date!", text: `You have the latest version: v${updateCheck.info.localVersion}` }; };
-  const renderModalContent = () => { switch (modalStage) { case 'confirmation': return (<> <h3 style={STYLES.modalTitle}>{CONTENT.modalTitle}</h3> <p style={STYLES.modalText}>You are about to update from <b>v{updateCheck.info.localVersion}</b> to <b>v{updateCheck.info.remoteVersion}</b>. This will overwrite existing files.</p> <div style={STYLES.buttonGroup}> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCloseModal}>Cancel</button> <button style={STYLES.button} onClick={handleStartUpdate} onMouseEnter={() => setIsConfirmHovered(true)} onMouseLeave={() => setIsConfirmHovered(false)}>Confirm Update</button> </div> <p style={{ ...STYLES.hoverRevealText, opacity: isConfirmHovered ? 1 : 0, transform: isConfirmHovered ? 'translateY(0)' : 'translateY(5px)' }}>bro you trust me ?</p> </>); case 'bet': return <div className="bet-reveal"><h1 style={STYLES.betText}>BET 🫡</h1></div>; case 'processing': return (<> <h3 style={STYLES.modalTitle}>Upgrading...</h3> <p style={STYLES.modalText}>{updateStatus === 'downloading' ? 'Downloading latest version...' : (updateStatus === 'comparing' ? 'Comparing files...' : 'Applying changes...')}</p> </>); case 'results': return (<> <h3 style={STYLES.modalTitle}>Update Complete!</h3> <p style={STYLES.modalText}>Applied version <b>v{updateCheck.info.remoteVersion}</b>.</p> <div> {updateResult.newFiles.length > 0 && <> <p style={{...STYLES.bannerTitle, fontSize: '1em', margin: '0 0 5px 0' }}>New Files Added:</p> <ul style={STYLES.resultList}>{updateResult.newFiles.map(f => <li key={f.path} style={{...STYLES.resultItem, ...STYLES.resultItemNew}}>+ {f.path}</li>)}</ul> </>} {updateResult.updatedFiles.length > 0 && <> <p style={{...STYLES.bannerTitle, fontSize: '1em', margin: '10px 0 5px 0' }}>Files Updated:</p> <ul style={STYLES.resultList}>{updateResult.updatedFiles.map(f => <li key={f.path} style={{...STYLES.resultItem, ...STYLES.resultItemUpdate}}>~ {f.path}</li>)}</ul> </>} </div> <div style={{...STYLES.buttonGroup, marginTop: '15px'}}><button style={STYLES.button} onClick={handleCloseModal}>Finish</button></div> </>); default: return null; } }
+  const renderBannerContent = () => { if (updateCheck.status === 'checking') { return { title: "Checking for Updates...", text: "Please wait a moment." }; } if (updateCheck.info?.updateAvailable) { return { title: `Update Available: v${updateCheck.info.remoteVersion}`, text: `You are on v${updateCheck.info.localVersion}. Click to see changes and upgrade.` }; } return { title: "You are Up-to-Date!", text: `You have the latest version: v${updateCheck.info.localVersion}` }; };
+  
+  // --- MODIFIED --- The 'confirmation' stage now includes a changelog preview.
+  const renderModalContent = () => {
+    switch (modalStage) {
+      case 'confirmation': return (<>
+        <h3 style={STYLES.modalTitle}>{CONTENT.modalTitle}</h3>
+        <p style={STYLES.modalText}>You are about to update from <b>v{updateCheck.info.localVersion}</b> to <b>v{updateCheck.info.remoteVersion}</b>.</p>
+        <p style={{...STYLES.modalText, margin: '5px 0', fontWeight: '500', textAlign: 'left', width: '100%'}}>Here's what's new:</p>
+        <div style={STYLES.changelogContent}>
+            {updateCheck.info?.changelogEntry || "Could not load changelog details."}
+        </div>
+        <div style={{...STYLES.buttonGroup, marginTop: '20px'}}>
+            <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCloseModal}>Cancel</button>
+            <button style={STYLES.button} onClick={handleStartUpdate} onMouseEnter={() => setIsConfirmHovered(true)} onMouseLeave={() => setIsConfirmHovered(false)}>Confirm Update</button>
+        </div>
+        <p style={{ ...STYLES.hoverRevealText, opacity: isConfirmHovered ? 1 : 0, transform: isConfirmHovered ? 'translateY(0)' : 'translateY(5px)' }}>bro you trust me ?</p>
+      </>);
+      case 'bet': return <div className="bet-reveal"><h1 style={STYLES.betText}>BET 🫡</h1></div>;
+      case 'processing': return (<> <h3 style={STYLES.modalTitle}>Upgrading...</h3> <p style={STYLES.modalText}>{updateStatus === 'downloading' ? 'Downloading latest version...' : (updateStatus === 'comparing' ? 'Comparing files...' : 'Applying changes...')}</p> </>);
+      case 'results': return (<>
+        <h3 style={STYLES.modalTitle}>Update to v{updateCheck.info.remoteVersion} Complete!</h3>
+        <p style={STYLES.modalText}>Here's what's new in this version:</p>
+        <div style={STYLES.changelogContent}>
+            {updateResult?.changelogEntry || "No changelog entry could be found."}
+        </div>
+        <div style={{...STYLES.buttonGroup, marginTop: '15px'}}>
+            <button style={STYLES.button} onClick={handleCloseModal}>Finish</button>
+        </div>
+        </>);
+      default: return null;
+    }
+  }
+
   const bannerContent = renderBannerContent();
-  return ( <div ref={containerRef}> <style>{STYLES.injectedStyles}</style> {isModalOpen && <div style={STYLES.modalOverlay} className="modal-fade-in"><div style={STYLES.modalContent} className="modal-scale-in">{renderModalContent()}</div></div>} {isFullTab ? ( <div style={STYLES.fullTabWrapper} className={uniqueWrapperClass}>
-    <span style={STYLES.icon} className="subtle-icon" title="Exit Full Tab" onClick={handleExitFullTab}>&lt;/&gt;</span>
-    {/* --- NEW --- Reload button is here */}
-    <button onClick={onReloadRequest} className="reload-button" style={STYLES.reloadButton} aria-label="Reload Component" title="Reload Component">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
-        </svg>
-    </button>
-    <h2 style={STYLES.title}>{CONTENT.title}</h2><p style={STYLES.subtitle}>{CONTENT.subtitle}</p> <div style={{...STYLES.promoBanner, cursor: updateCheck.info?.updateAvailable ? 'pointer' : 'default', opacity: updateCheck.status === 'checking' ? 0.7 : 1}} className="promo-banner" onClick={handleOpenModal}> <div style={STYLES.promoIconContainer}><AnimatedIcon svgString={ICONS[0].svg} isActive={updateCheck.info?.updateAvailable} isInView={true} /></div> <div style={STYLES.bannerTextContainer}> <h3 style={STYLES.bannerTitle}>{bannerContent.title}</h3><p style={STYLES.bannerText}>{bannerContent.text}</p> </div> </div> </div> ) : ( <div style={STYLES.compactWrapper}> <p style={STYLES.compactText}>Component is in compact mode.</p> <div style={STYLES.buttonGroup}> <button style={STYLES.button} onClick={handleEnterFullTab}>Enter Full Tab</button> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCopyPath}>Find Codeblock</button> </div> </div> )} </div> );
+  return ( <div ref={containerRef}> <style>{STYLES.injectedStyles}</style> {isModalOpen && <div style={STYLES.modalOverlay} className="modal-fade-in"><div style={STYLES.modalContent} className="modal-scale-in">{renderModalContent()}</div></div>} {isFullTab ? ( <div style={STYLES.fullTabWrapper} className={uniqueWrapperClass}> <span style={STYLES.icon} className="subtle-icon" title="Exit Full Tab" onClick={handleExitFullTab}>&lt;/&gt;</span> <h2 style={STYLES.title}>{CONTENT.title}</h2><p style={STYLES.subtitle}>{CONTENT.subtitle}</p> <div style={{...STYLES.promoBanner, cursor: updateCheck.info?.updateAvailable ? 'pointer' : 'default', opacity: updateCheck.status === 'checking' ? 0.7 : 1}} className="promo-banner" onClick={handleOpenModal}> <div style={STYLES.promoIconContainer}><AnimatedIcon svgString={ICONS[0].svg} isActive={updateCheck.info?.updateAvailable} isInView={true} /></div> <div style={STYLES.bannerTextContainer}> <h3 style={STYLES.bannerTitle}>{bannerContent.title}</h3><p style={STYLES.bannerText}>{bannerContent.text}</p> </div> </div> </div> ) : ( <div style={STYLES.compactWrapper}> <p style={STYLES.compactText}>Component is in compact mode.</p> <div style={STYLES.buttonGroup}> <button style={STYLES.button} onClick={handleEnterFullTab}>Enter Full Tab</button> <button style={{...STYLES.button, ...STYLES.secondaryButton}} onClick={handleCopyPath}>Find Codeblock</button> </div> </div> )} </div> );
 };
 
-// =================================================================================
-// --- NEW --- Container Component (Manages the hard reset logic)
-// =================================================================================
-function VaultUpdaterContainer() {
-    const [refreshKey, setRefreshKey] = useState(0);
-
-    const handleHardReset = () => {
-        console.log(`${LOG_PREFIX} Hard reset triggered. Forcing component to remount.`);
-        setRefreshKey(prevKey => prevKey + 1);
-    };
-
-    // Every time handleHardReset is called, the `key` prop changes,
-    // forcing React to destroy the old BasicView and create a new one.
-    return <BasicView key={refreshKey} onReloadRequest={handleHardReset} />;
-}
-
-// The final export is the container, which seamlessly handles the reset logic.
-return { BasicView: VaultUpdaterContainer };
+return { BasicView };
 ```
 
 
